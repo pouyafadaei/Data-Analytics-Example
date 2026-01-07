@@ -7,13 +7,9 @@ relates to depression, social connectedness, and acculturative stress.
 
 The goal is to demonstrate clean, readable SQL and a reproducible analysis workflow.
 
----
-
 ## Question
 
 **How do mental health indicators vary among international students based on their length of stay?**
-
----
 
 ## Dataset
 
@@ -28,9 +24,6 @@ The analysis uses a single table containing student survey results.
 | `toas`      | Acculturative stress score (ASISS) |
 
 Only international students (`inter_dom = 'Inter'`) are included in the final query.
-
----
-
 
 ## Output
 

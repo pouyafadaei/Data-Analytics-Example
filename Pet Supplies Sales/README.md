@@ -23,8 +23,6 @@ The raw dataset contains multiple data quality issues:
 
 These issues must be resolved before meaningful analysis can be performed.
 
----
-
 ## Approach
 
 1. **Compute the median of valid sales values** using `PERCENTILE_CONT`
@@ -33,16 +31,12 @@ These issues must be resolved before meaningful analysis can be performed.
 4. **Standardize text formatting** (e.g., product size)
 5. **Safely cast numeric fields** and handle invalid entries
 
----
-
 ## SQL Logic Highlights
 
 * Median calculation via ordered-set aggregate
 * Median used only when `sales` is NULL
 * Explicit data cleaning using `CASE`, `COALESCE`, and casting
 * Single-query, reproducible transformation
-
----
 
 ## Requirements
 
@@ -52,22 +46,23 @@ These issues must be resolved before meaningful analysis can be performed.
   (Required for `PERCENTILE_CONT` and ordered-set aggregates)
 
 ---
+
 ## Import Data (PostgreSQL)
 
 ```sql
 COPY pet_supplies (
-    product_id,
-    category,
-    animal,
-    size,
-    price,
-    sales,
-    rating,
-    repeat_purchase
-)
-FROM '/absolute/path/to/Pet Supplies Sales/datalab.csv'
-DELIMITER ','
-CSV HEADER;
+                   product_id,
+                   category,
+                   animal,
+                   size,
+                   price,
+                   sales,
+                   rating,
+                   repeat_purchase
+    )
+    FROM '/absolute/path/to/Pet Supplies Sales/datalab.csv'
+    DELIMITER ','
+    CSV HEADER;
 ```
 
 ## Output Description

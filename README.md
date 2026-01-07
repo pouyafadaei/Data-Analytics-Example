@@ -8,8 +8,6 @@ of datasets.
 The projects demonstrate how raw data can be transformed into **clean, analysis-ready outputs** using structured
 queries, data cleaning techniques, and analytical logic commonly applied in data science and business analytics roles.
 
----
-
 ## Purpose
 
 The main goals of this repository are to:
@@ -21,8 +19,6 @@ The main goals of this repository are to:
 
 Each example is designed to be **self-contained**, with clear problem statements and reproducible steps.
 
----
-
 ## Technologies
 
 * SQL (PostgreSQL)
@@ -30,8 +26,6 @@ Each example is designed to be **self-contained**, with clear problem statements
 * CSV-based datasets
 
 Additional tools and technologies may be added as the repository evolves.
-
----
 
 ## How to Use
 
